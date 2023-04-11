@@ -206,6 +206,7 @@ color: white;
     <th>Product Name</th>
     <th>Quantity</th>
     <th>Unit</th>
+      <th>Workbench</th>
     
   </tr>
   </thead>
@@ -219,12 +220,14 @@ color: white;
        $product_name=$row['product_name'];
        $quantity=$row['quantity'];
        $unit=$row['unit']; 
+       $workbench_id=$row['workbench_id'];
           
           echo '<tr>
               <td>'.$row["product_id"].'</td>
               <td>'.$row["product_name"].'</td>
               <td>'.$row["quantity"].'</td>
                <td>'.$row["unit"].'</td>
+               <td>'.$row["workbench_id"].'</td>
                
                
               
