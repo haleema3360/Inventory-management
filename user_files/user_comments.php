@@ -142,7 +142,14 @@ span.posted-by {
                         
                         <span class="item">Raw Materials Inventory</span>
                     </a>
-                </li><li>
+                </li>
+		    <li>
+                    <a href="user_workbench.php">
+                        
+                        <span class="item">Workbench</span>
+                    </a>
+                </li>
+		    <li>
                     <a href="user_comments.php" class="active">
                         
                         <span class="item">Comments</span>
