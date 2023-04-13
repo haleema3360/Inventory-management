@@ -198,7 +198,7 @@ font-size: 30px;
 <h2 class="heading"> Update</h2>
 <div class="box">
 <div>
-  <form action="modify_rm.php" method="post">
+  <form action="modify_rm.php?editid=<?= $sku_id?>" method="post">
       
       <table>
   <tr>
