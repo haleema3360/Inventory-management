@@ -156,6 +156,12 @@ color: white;
                     </a>
                 </li>
                 <li>
+                    <a href="user_workbench.php">
+                        
+                        <span class="item">Workbench</span>
+                    </a>
+                </li>
+                <li>
                  <a href="user_comments.php">
                         
                         <span class="item">Comments</span>
