@@ -8,7 +8,8 @@ if(isset($_POST['update'])){
         $duration=$_POST["duration"];
         
        $sql = "UPDATE `workbench` SET id='$id',department='$department',status='$status',duration='$duration' WHERE id='$id'";
-        if($status=='Not Occupied'){
+       
+       if($status=='Not Occupied'){
            $sql1="SELECT product_id,product_name FROM products WHERE workbench_id=$id";
            $stmt=$conn->query($sql1);
            if($stmt!=false){
@@ -20,9 +21,10 @@ if(isset($_POST['update'])){
            }
            
        }
+          
         $result = mysqli_query($conn, $sql);
           if($result){         
-           header("location:admin_workbench.php");
+           header("location:user_workbench.php");
             exit;
             
           }
