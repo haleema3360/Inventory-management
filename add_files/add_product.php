@@ -1,7 +1,7 @@
 <?php
 include 'dbconnect.php';
 if(isset($_POST['submit'])){
-       // $product_id= $_POST["product_id"];
+        $product_id= $_POST["product_id"];
         $product_name=$_POST["product_name"];
         
         $quantity=$_POST["quantity"];
@@ -222,10 +222,11 @@ input[type=submit]:hover {
 <div class="box">
 <div>
   <form action="add_product.php" method="post">
-    <!-- <label>Product ID</label>
-    <input type="text"  name="product_id" placeholder="Product ID"> -->
+      <table>
+    <label>Product ID</label>
+    <input type="text"  name="product_id" placeholder="Product ID">
     <br>
-<table>
+
     <tr>
         <td>
             <label>Product Name</label>
