@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location:login_user.php");
+    header("location:login_admin.php");
     exit;
 }
 ?>
@@ -222,6 +222,72 @@ body.active .wrapper .section{
 	margin-left: 0;
 	width: 100%;
 }
+@media (max-width:1500px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 450px;
+         padding: 10px;
+         width:390px;
+     }
+     .outer-comment {
+         margin-left: 300px;
+     }
+}
+@media (max-width:1320px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 400px;
+         padding: 10px;
+         width:380px;
+     }
+     .outer-comment {
+         margin-left: 280px;
+     }
+}
+@media (max-width:900px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 400px;
+         padding: 10px;
+     }
+     .outer-comment {
+         margin-left: 300px;
+     }
+}
+@media (max-width:254px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 80px;
+         padding: 5px;
+         width:320px;
+     }
+     .outer-comment {
+         margin-left: 40px;
+          width:510px;
+     }
+}
+@media (max-width:430px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 110px;
+         padding: 5px;
+         width:320px;
+     }
+     .outer-comment {
+         margin-left: 30px;
+         width:520px;
+     }
+}
 </style>
 <title>Comments</title>
 <script src="jquery-3.2.1.min.js"></script>
@@ -325,7 +391,7 @@ body.active .wrapper .section{
 				<div class="label">Name:</div>
 				<input type="hidden" name="comment_id" id="commentId" /> <input
 					class="input-field" type="text" name="name" id="name"
-					placeholder="Enter your name" />
+					placeholder="Enter your Name and Designation" />
 			</div>
 			<div class="input-row">
 				<textarea class="input-field" name="comment" id="comment"

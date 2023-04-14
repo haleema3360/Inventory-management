@@ -5,18 +5,14 @@ if(isset($_POST['submit'])){
         $material=$_POST["material"];
         $type=$_POST["type"];
         $quantity=$_POST["quantity"];
-        $unit=$_POST["unit"];
+        $units=$_POST["units"];
         $received_date=$_POST["received_date"];
-          
-
           $sql = "INSERT INTO raw_materials (sku_id, material, type, quantity, units, received_date)
-           VALUES ('$sku_id', '$material', '$type', '$quantity', '$unit', '$received_date')";
+           VALUES ('$sku_id', '$material', '$type', '$quantity', '$units', '$received_date')";
           $result = mysqli_query($conn, $sql);
           if($result){
-            header("location:admin_rawmaterials.php");
-            echo"Data inserted";
+              header("location: admin_rawmaterials.php");
             exit;
-            
           }
           else{
           die(mysqli_error($conn));
@@ -24,8 +20,6 @@ if(isset($_POST['submit'])){
            }
 }
 ?>
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,15 +32,28 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
    <style>
-   .content {
-	border: 1px;
-	
-	margin-top: 30px;
-	margin-bottom: 60px;
-	margin-right: 0px;
-	margin-left:180px;
+  .wrapper .sidebar{
+	background:#393E46;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	padding: 14px 0;
+	transition: all 0.5s ease;
+}
+  h2{
+      margin-left:20px;
+  }
+.content {
+  border: 1px;
+  
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-right: 0px;
+  margin-left: 250px;
     word-wrap: break-word;
-   
+    
 }
 * {
     list-style: none;
@@ -58,16 +65,15 @@ if(isset($_POST['submit'])){
 }
 
  .content .box {
-	  padding: 5px;
-	  width: 75%;
-	   background-color:white;
-	  
-
-	  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       display: block;
        margin-left: auto;
         margin-right: auto;
+        background:white;
   }
+
  .content .box.user-info {
   font-family: Arial, Helvetica, sans-serif;
   
@@ -75,22 +81,22 @@ if(isset($_POST['submit'])){
 }
 
 .content .box .user-info td, .user-info th {
- 
-  padding: 15px;
+ font-size:13px;
+  padding: 9px;
 }
 
 
 
 .content .box.user-info th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 18px;
   text-align: left;
- 
+ font-size:19px;
 
 }
 .content .box .heading{
 font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;
+font-size: 15px;
 }
 
 .products {
@@ -101,30 +107,18 @@ font-size: 30px;
 
 .products td, .products th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 3px;
+  font-size:15px;
+}
+.but {
+color: white;
 }
 
-
-input[type=submit]:hover {
-  background-color: #0D4C92;
-}
-.heading{
-  margin-left: 90px;
-  color: black;
-  margin-bottom: 20px;
-
-
-}
-
-
-
-
-
-.products tr:hover {background-color: #0D4C92;}
+.products tr:hover {background-color: #ddd;}
 
 .products th {
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 12px;
   text-align: left;
   background-color: #0D4C92;
   color: white;
@@ -132,12 +126,28 @@ input[type=submit]:hover {
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #0D4C92;
+    margin-left: 900px;
+    margin-bottom: 30px;
+    
+  
+}
+.btn-secondary{
+  margin-left: 490px;
+}
+.namee{
+  margin-left: 0px;
+}
+.pencil{
+  margin-left: 530px;
+  
+    position: absolute;
+     margin-top: 0px;
 }
 </style>
 
     
 
-    <title>Products</title>
+    <title>Add Raw Material</title>
   </head>
   <body>
 
@@ -229,8 +239,8 @@ input[type=submit]:hover {
       <table>
   <tr>
     <td>
-    <label>Product ID</label><br>
-    <input type="text"  name="sku_id" placeholder="Product ID">
+    <label>SKU ID</label><br>
+    <input type="text"  name="sku_id" placeholder="SKU ID">
     </td>
     <td>
      <label>Material</label><br>
@@ -259,7 +269,7 @@ input[type=submit]:hover {
     <label>Units</label><br>
     
    
-    <select name="unit" id="">
+    <select name="units" id="">
                         <option value="" disabled hidden selected>Unit</option>
                         <option value="m²">m²</option>
                         <option value="pcs">pcs</option>
