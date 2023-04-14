@@ -10,7 +10,7 @@ if(isset($_POST['update'])){
         $phone=$_POST["phone"];
         $address=$_POST["address"];
 
-        $sql = "UPDATE `users` SET `user_id` = '$user_id', `username` = '$username',`dob`='$dob',
+        $sql = "UPDATE `admin` SET `user_id` = '$user_id', `username` = '$username',`dob`='$dob',
         `gender`='$gender',`phone`='$phone',`address`='$address' WHERE user_id='$user_id'";
 
           $result = mysqli_query($conn, $sql);
