@@ -116,6 +116,120 @@ input[type=submit]:hover {
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #0D4C92;
 }
+.wrapper .sidebar{
+	background:#393E46;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	padding: 14px 0;
+	transition: all 0.5s ease;
+}
+  h2{
+      margin-left:20px;
+  }
+.content {
+  border: 1px;
+  
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-right: 0px;
+  margin-left: 250px;
+    word-wrap: break-word;
+    
+}
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ .content .box {
+    padding: 10px;
+    width: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: block;
+       margin-left: auto;
+        margin-right: auto;
+        background:white;
+  }
+
+ .content .box.user-info {
+  font-family: Arial, Helvetica, sans-serif;
+  
+  width: 100%;
+}
+
+.content .box .user-info td, .user-info th {
+ font-size:13px;
+  padding: 9px;
+}
+
+
+
+.content .box.user-info th {
+  padding-top: 8px;
+  padding-bottom: 18px;
+  text-align: left;
+ font-size:19px;
+
+}
+.content .box .heading{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+}
+
+.products {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.products td, .products th {
+  border: 1px solid #ddd;
+  padding: 3px;
+  font-size:15px;
+}
+.but {
+color: white;
+}
+
+
+
+
+.products tr:hover {background-color: #ddd;}
+
+.products th {
+  padding-top: 15px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0D4C92;
+  color: white;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #0D4C92;
+    margin-left: 900px;
+    margin-bottom: 30px;
+    
+  
+}
+.btn-secondary{
+  margin-left: 490px;
+}
+.namee{
+  margin-left: 0px;
+}
+.pencil{
+  margin-left: 530px;
+  
+    position: absolute;
+     margin-top: 0px;
+}
 </style>
 
     

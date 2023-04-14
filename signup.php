@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        
         if(($password == $cpassword)){
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO `admin` ( `username`,`user_id`,`dob`,`gender`,`designation`,`phone`,`address` ,`password`, `date`) VALUES ('$username','$user_id','$dob','$gender','$designation','$phone','$address', '$password', current_timestamp())";
+            $sql = "INSERT INTO `admin` ( `username`,`user_id`,`dob`,`gender`,`designation`,`phone`,`address` ,`password`, `date`) VALUES ('$username','$user_id','$dob','$gender','$designation','$phone','$address', '$hash', current_timestamp())";
             $result = mysqli_query($conn, $sql);
             if ($result){
                 $showAlert = true;

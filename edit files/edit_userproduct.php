@@ -1,9 +1,6 @@
 <?php
 include 'dbconnect.php';
 if(isset($_GET['editid'])){
-  
-
-
 $product_id=$_GET['editid'];
 $sql="SELECT * FROM `products` WHERE product_id = '$product_id'";
 $result=$conn->query($sql);
@@ -258,64 +255,52 @@ color: white;
             </div>
             <ul>
                 <li>
-                    <a href="admin_profile.php" >
+                    <a href="user_profile.php" >
                         <span class="item">Profile</span>
                     </a>
                 </li>
                     
                 <li>
-                    <a href="admin_products.php" class="active">
+                    <a href="user_products.php" class="active">
                         
                         <span class="item">Products</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_porders.php">
-                        
-                        <span class="item">Product Orders</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_rawmaterials.php">
+                    <a href="user_rawmaterials.php">
                         
                         <span class="item">Raw Materials Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_workbench.php">
+                    <a href="user_workbench.php">
                         
                         <span class="item">Workbench</span>
                     </a>
                 </li>
                 
                 <li>
-                    <a href="admin_wip.php">
+                    <a href="user_wip.php">
                         
                         <span class="item">WIP Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_finishedg.php">
+                    <a href="user_finishedg.php">
                         
                         <span class="item">Finished Goods Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_mro.php">
+                    <a href="user_mro.php">
                         
                         <span class="item">MRO Inventory</span>
                     </a>
                 </li>
                  <li>
-                 <a href="comments.php">
+                 <a href="user_comments.php">
                         
                         <span class="item">Comments</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_empmanage.php">
-                        
-                        <span class="item">Employee Management</span>
                     </a>
                 </li>
                 <li>
@@ -336,7 +321,7 @@ color: white;
 <h2 class="heading">Edit Product Info</h2>
 <div class="box">
 <div>
-  <form action="modify.php?editid=<?= $product_id ?>" method="post">
+  <form action="modify_userproduct.php?editid=<?= $product_id ?>" method="post">
   <table>
       <tr>
           <td>

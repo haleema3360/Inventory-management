@@ -23,7 +23,7 @@ include 'dbconnect.php';
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-   <style>
+ <style>
    h2{
       margin-left:60px;
   }
@@ -122,14 +122,11 @@ font-size: 24px;
 .but {
 color: white;
 }
-.input-group{
-     margin-bottom: 10px;
-}
 #search{
-  width:200px;
+  width:100%;
   padding: 5px 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-right: 30px;
   margin-left: 700px;
   display: inline-block;
@@ -146,297 +143,6 @@ color: white;
 	height: 100%;
 	padding: 14px 0;
 	transition: all 0.5s ease;
-}
-@media (max-width:1054px){
-
-  
-   
-}
-
-@media (max-width:991px){
-
-   html{
-      font-size: 85%;
-  
-   }
-
-   body{
-      padding-left: 0;
-   }
-   .content .box {
-    padding: 6px;
-    width: 100%;
-    margin-left:0px;
-    margin-right:810px;
-    margin-top:10px;
-     z-index:1;
-
-}
-  
-   
-}
-@media (max-width:915px){
-
-  
-   .wrapper{
-       width:50%;
-   }
-   
-}
-@media (max-width:815px){
-     html{
-      font-size: 65%;
-     
-   }
-
-
-   body{
-      padding-left: 0;
-   }
-   
-   
-}
-@media (max-width:808px){
-
-   
-   
-}
-@media (max-width:700px){
-     html{
-      font-size: 65%;
-     }
-   .content .box {
-    padding:5px;
-    width: 450px;
-    margin-left:-70px;
-    margin-right:510px;
-    margin-top:10px;
-     z-index:1;
-}
-   body{
-      padding-left: 0;
-      height:1100px;
-   }
-   
-   #search{
-  width:30%;
-  padding: 2px;
-  margin-top: 3px;
-  margin-bottom: 2px;
-  margin-right:30px;
-   z-index:-1;
-  margin-left: 100px;
-}
-   
-}
-@media (max-width:660px){
-
-   html{
-      font-size: 85%;
-     
-}
-
-   body{
-      padding-left: 0;
-       height:1100px;
-   }
-   .content .box {
-    padding: 6px;
-    width: 100%;
-    
-    margin-left:-70px;
-    margin-right:610px;
-    margin-top:10px;
-     z-index:1;
-
-}
-#search{
-  width:20%;
-  padding: 2px;
-  margin-top: 3px;
-  margin-bottom: 2px;
-  margin-right:50px;
-   z-index:-1;
-  margin-left: 90px;
-}
-   
-   td,th{
-    padding:8px;
-    font-size: 14px;
-}
-   
-}
-
-@media (max-width:550px) { 
-
-   html{
-      font-size: 85%;
-     
-}
-   body{
-      padding:0px;
-      height:500px;
-   }
-   .content .box {
-    padding: 2px;
-    width: 400px;
-    margin-left:-180px;
-    margin-right:510px;
-    margin-top:10px;
-     z-index:10;
-
-}
-  
-   td,th{
-    padding:8px;
-    font-size: 12px;
-}
-
-   
-}
-@media (max-width: 477px) { 
-
-   html{
-      font-size: 45%;
-     
-}
-h3{
-    padding:5px;
-}
-
-   body{
-      padding:10px;
-      height:500px;
-   }
-   .content .box {
-    padding: 2px;
-    width: 340px;
-    margin-left:-190px;
-    margin-right:10px;
-    margin-top:10px;
-     z-index:10;
-
-}
-  
-   .content .box .user-info td, .user-info th {
-font-size: 45%;
-  padding: 0px;
-}
-#search{
-  width:40%;
-  padding: 2px;
-  margin-top: 3px;
-  margin-bottom: 2px;
-  margin-right:40px;
-   z-index:-1;
-  margin-left: 50px;
-}
-td,th{
-    padding:0px;
-    font-size: 12px;
-}
-   
-}
-@media (max-width: 406px) { 
- html{
-      font-size: 45%;
-     
-}
-
-   body{
-      padding:0px;
-      height:400px;
-   }
-   .content .box {
-    padding: 0px;
-    width: 360px;
-    margin-left:-220px;
-    margin-right:10px;
-    margin-top:10px;
-     z-index:10;
-
-}
-h3{
-    padding:10px;
-}
-   
-   .content .box .user-info td, .user-info th {
-  padding: 0px;
-  font-size: 45%;
-}
-#search{
-  display: none;
-}
-td,th{
-    padding:0px;
-    font-size: 12px;
-}
-}
-@media (max-width: 294px) {
-    #search{
-   display: none;
-}
-}
-@media (max-width: 393px) { 
- html{
-      font-size: 35%;
-     
-}
-.content .box .user-info td, .user-info th {
-  padding: 0px;
-  font-size: 45%;
-}
-   body{
-      padding:0px;
-      height:400px;
-   }
-   .content .box {
-    padding: 0px;
-    width: 360px;
-    margin-left:-240px;
-    margin-top:10px;
-     z-index:10;
-
-}
-h3{
-    padding:10px;
-}
-   
-    #search{
-  display: none;
-}
-td,th{
-    padding:0px;
-    font-size: 12px;
-}
-}
-@media (max-width: 280px) { 
- html{
-      font-size: 35%;
-   }
-
-   body{
-      padding:0px;
-      height:400px;
-   }
-   .content .box {
-    padding: 0px;
-    width: 360px;
-    margin-left:-250px;
-    margin-right:10px;
-    margin-top:10px;
-     z-index:1;
-
-}
-   
- 
-#search{
-  display: none;
-}
-td,th{
-    padding:0px;
-    font-size: 9px;
-}
 }
 
 </style>
@@ -532,6 +238,11 @@ td,th{
 
         
 <div class="content">
+    <form action="" method="POST">
+                                    <div class="input-group">
+                                        <input type="text" name="search" id="search" class="form-control" placeholder="Search data" >
+                                    </div>
+                                </form>
 <div class="box">
 <table class="user-info">
         
@@ -548,10 +259,11 @@ td,th{
     <th>Quantity</th>
     <th>Unit</th>
     <th>Workbench</th>
+    <th>Action</th>
     
   </tr>
   </thead>
-  <tbody>
+   <tbody  id="employee_table">
   <?php
   $uname=$_SESSION['username'];
    $sql5=mysqli_query($conn,"SELECT `workstation` FROM `users` WHERE username='$uname'");
@@ -577,6 +289,10 @@ td,th{
               <td>'.$row["quantity"].'</td>
                <td>'.$row["unit"].'</td>
                <td>'.$row["workbench_id"].'</td>
+               <td>
+               <button type="button" class="btn btn-link"> <a href="edit_userproduct.php?editid='.$product_id.'">  <span class="bi bi-pencil-fill"></span></a></button>
+               
+</td>
                
                
               
@@ -609,7 +325,7 @@ td,th{
     <th>Product ID</th>
     <th>Raw Material</th>
     <th>Quantity</th>
-    <th>Action</th>
+    
   </tr>
   </thead>
   <tbody  id="employee_table">
@@ -628,14 +344,6 @@ while ($row = $stmt->fetch_array(MYSQLI_ASSOC)) {
             <td>'.$product_id.'</td>
             <td>'.$raw_material.'</td>
             <td>'.$rm_quantity.'</td>
-            <td>
-                <button type="button" class="btn btn-link">
-                    <a href="edit.php?editid='.$product_id.'">
-                        <span class="bi bi-pencil-fill"></span>
-                    </a>
-                </button>
-                
-            </td>
         </tr>';
     }
 }
@@ -655,5 +363,31 @@ while ($row = $stmt->fetch_array(MYSQLI_ASSOC)) {
    hamburger.classList.remove('active');
 }
   </script>
+  <script>  
+      $(document).ready(function(){  
+           $('#search').keyup(function(){  
+                search_table($(this).val());  
+           });  
+           function search_table(value){  
+                $('#employee_table tr').each(function(){  
+                     var found = 'false';  
+                     $(this).each(function(){  
+                          if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)  
+                          {  
+                               found = 'true';  
+                          }  
+                     });  
+                     if(found == 'true')  
+                     {  
+                          $(this).show();  
+                     }  
+                     else  
+                     {  
+                          $(this).hide();  
+                     }  
+                });  
+           }  
+      });  
+ </script>  
   </body>
 </html>

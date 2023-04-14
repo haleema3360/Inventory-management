@@ -9,14 +9,40 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <style>
+span.item {
+    font-size: 13px;
+    text-align:center;
+}
+.wrapper .sidebar{
+	background:#393E46;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	padding: 14px 0;
+	transition: all 0.5s ease;
+}
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 12px 24px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(241, 237, 237);
+	font-size: 10px;
+	position: relative;
+}
+h2{
+      margin-left:60px;
+  }
 body {
 	font-family: Arial;
 	width: 1000px;
@@ -28,7 +54,8 @@ body {
 	padding: 20px;
 	border-radius: 4px;
 	margin-left: 515px;
-	margin-top: 15px;
+	margin-top: 30px;
+
 }
 
 .input-row {
@@ -55,6 +82,7 @@ body {
 
 ul {
 	list-style-type: none;
+	margin-left:0px;
 }
 
 .comment-row {
@@ -69,8 +97,8 @@ ul {
 	border: #dedddd 1px solid;
 	border-radius: 4px;
 	margin-left: 415px;
+		margin-top: 10px;
 	width: 700px;
-	margin-top: 10px;
 }
 
 span.comment-row-label {
@@ -109,24 +137,183 @@ span.posted-by {
 .label {
 	padding: 0 0 4px 0;
 }
+.listt{
+    margin-left:0px;
+}
+.wrapper .sidebar ul li a{
+	/*display: block;*/
+	padding: 13px 5px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+		margin-left: 0px;
+}
+h2{
+    text-align:center;
+    color: white;
+    margin-right:170px;
+  }
+  .wrapper .sidebar ul li a{
+	display: block;
+	padding: 12px 24px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(241, 237, 237);
+	font-size: 13px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #0c7db1;
+
+	background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+ .top_navbar{
+    background: #F5F6FA;
+}
 
 
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 24px;
+		color:#393E46;
+		margin-left:10px;
+		padding:10px;
+	
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color: #0D4C92;
+}
+
+ 
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+@media (max-width:1500px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 450px;
+         padding: 10px;
+         width:390px;
+     }
+     .outer-comment {
+         margin-left: 300px;
+     }
+}
+@media (max-width:1320px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 400px;
+         padding: 10px;
+         width:380px;
+     }
+     .outer-comment {
+         margin-left: 280px;
+     }
+}
+@media (max-width:900px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 400px;
+         padding: 10px;
+     }
+     .outer-comment {
+         margin-left: 300px;
+     }
+}
+@media (max-width:254px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 80px;
+         padding: 5px;
+         width:320px;
+     }
+     .outer-comment {
+         margin-left: 40px;
+          width:510px;
+     }
+}
+@media (max-width:430px){
+     html{
+      font-size: 13px;
+     }
+     .comment-form-container {
+         margin-left: 110px;
+         padding: 5px;
+         width:320px;
+     }
+     .outer-comment {
+         margin-left: 30px;
+         width:520px;
+     }
+}
 </style>
 <title> User Comments</title>
 <script src="jquery-3.2.1.min.js"></script>
 
 
 <body>
-    <div class="wrapper">
+      <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
         <div class="sidebar">
             <div class="profile">
-           
-            <h2><?php echo $_SESSION['username']?></h2>
-            
+                
+                <h2><?php echo $_SESSION['username']?></h2>
+                
             </div>
-            <ul class="listt">
+            <ul>
                 <li>
-                    <a href="user_profile.php">
+                    <a href="user_profile.php" >
                         <span class="item">Profile</span>
                     </a>
                 </li>
@@ -137,25 +324,19 @@ span.posted-by {
                         <span class="item">Products</span>
                     </a>
                 </li>
+                
                 <li>
                     <a href="user_rm.php">
                         
                         <span class="item">Raw Materials Inventory</span>
                     </a>
                 </li>
-		    <li>
+                <li>
                     <a href="user_workbench.php">
                         
                         <span class="item">Workbench</span>
                     </a>
                 </li>
-		    <li>
-                    <a href="user_comments.php" class="active">
-                        
-                        <span class="item">Comments</span>
-                    </a>
-                </li>
-                
                 <li>
                     <a href="user_wip.php">
                         
@@ -163,18 +344,23 @@ span.posted-by {
                     </a>
                 </li>
                 <li>
-                    <a href="user_fg.php">
+                    <a href="user_fg.php" >
                         
                         <span class="item">Finished Goods Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="user_mro.php">
+                    <a href="user_mro.php" >
                         
                         <span class="item">MRO Inventory</span>
                     </a>
                 </li>
-               
+                 <li>
+                 <a href="user_comments.php" class="active">
+                        
+                        <span class="item">Comments</span>
+                    </a>
+                </li>
                 
                 <li>
                     
@@ -184,9 +370,9 @@ span.posted-by {
                 </li>
             
   </ul>
-  
-       </div>
-</div>
+        </div>
+
+   </div>
 	
 	<div class="comment-form-container">
 		<form id="frm-comment">
@@ -194,7 +380,7 @@ span.posted-by {
 				<div class="label">Name:</div>
 				<input type="hidden" name="comment_id" id="commentId" /> <input
 					class="input-field" type="text" name="name" id="name"
-					placeholder="Enter your name" />
+					placeholder="Enter your Name, Designation and Workstation" />
 			</div>
 			<div class="input-row">
 				<textarea class="input-field" name="comment" id="comment"
@@ -302,6 +488,15 @@ span.posted-by {
                 }
             }
         </script>
+        <script>
+       var hamburger = document.querySelector(".hamburger");
+	hamburger.addEventListener("click", function(){
+		document.querySelector("body").classList.toggle("active");
+	})
+	window.onscroll = () =>{
+   hamburger.classList.remove('active');
+}
+  </script>
 </body>
 
 </html>

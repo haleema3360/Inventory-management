@@ -5,8 +5,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'dbconnect.php';
     $username = $_POST["username"];
     $password = $_POST["password"]; 
-    $sql = "Select * from admin where username='$username'AND password='$password'";
-    $result = mysqli_query($conn, $sql);
+    $sql = "Select * from admin where username='$username'";
+  $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
     if ($num == 1){
         $login = true;
@@ -25,7 +25,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 

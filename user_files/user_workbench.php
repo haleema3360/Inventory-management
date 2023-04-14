@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location: index.php");
+    header("location: login_user.php");
     exit;
 }
 ?>
@@ -594,7 +594,7 @@ td,th{
               <td>'.$row["status"].'</td>
                <td>'.$row["duration"].'</td>
                <td>
-               <button type="button" class="btn btn-link"> <a href="edit_workbench.php?editid='.$id.'">  <span class="bi bi-pencil-fill"></span></a></button>
+               <button type="button" class="btn btn-link"> <a href="edit_userworkbench.php?editid='.$id.'">  <span class="bi bi-pencil-fill"></span></a></button>
                
 </td>
               

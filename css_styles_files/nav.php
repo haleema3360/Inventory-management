@@ -31,18 +31,6 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark  bg-secondary">
 if(!$loggedin){
   echo '
   <ul class="navbar-nav mr-auto">
-    <div>
-  <a class="btn btn-secondary" href="index.php" role="button"  aria-expanded="false">
-    Home
-  </a>
-  </div>
-  <li class="nav-item">
-  <div>&nbsp;&nbsp;
-  <a class="btn btn-secondary" href="login_admin.php" role="button"  aria-expanded="false">
-    Login
-  </a>
-   </li>
-  </div>&nbsp;&nbsp;
     <li class="nav-item">
     <div>
   <a class="btn btn-secondary"href="signup.php" role="button"  aria-expanded="false">

@@ -32,15 +32,11 @@ if(!$loggedin){
   echo '
   <ul class="navbar-nav mr-auto">
     
-  <a class="btn btn-secondary" href="index.php" role="button"  aria-expanded="false">
-    Home
-  </a>
-  </div>
   <li class="nav-item">
   <div>&nbsp;&nbsp;
  
-  <a class="btn btn-secondary" href="login_user.php" role="button"  aria-expanded="false">
-    Login
+  <a class="btn btn-secondary" href="index.php" role="button"  aria-expanded="false">
+    Home
   </a>
   </div>
    ';}

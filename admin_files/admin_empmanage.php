@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location: index.php");
+    header("location: login_admin.php");
     exit;
 }
 ?>
@@ -155,6 +155,343 @@ h2{
 h3{
     font-size: 20px;
 }  
+th,td{
+    font-size:13px;
+}
+@media (max-width:1054px){
+
+   .but{
+       margin-left:20px;
+       
+   }
+   
+}
+
+@media (max-width:991px){
+
+   html{
+      font-size: 85%;
+  
+   }
+
+   body{
+      padding-left: 0;
+   }
+   .content .box {
+    padding: 6px;
+    width: 100%;
+    margin-left:0px;
+    margin-right:810px;
+    margin-top:10px;
+     z-index:1;
+
+}
+   .but{
+       margin-left:10px;
+   }
+   
+}
+@media (max-width:915px){
+
+   .but{
+       margin-left:10px;
+   }
+   .wrapper{
+       width:50%;
+   }
+   
+}
+@media (max-width:815px){
+     html{
+      font-size: 65%;
+     
+   }
+
+
+   body{
+      padding-left: 0;
+   }
+   .but{
+       margin-left:10px;
+   }
+   
+}
+@media (max-width:868px){
+    #search{
+        display:none;
+    }
+ html{
+      font-size: 14px;
+     }
+   .btn-primary{
+       margin-left:120px;
+       width:50%;
+   }
+   
+}
+@media (max-width:700px){
+     html{
+      font-size: 13px;
+     }
+   .content .box {
+    padding:5px;
+    width: 490px;
+    margin-left:-70px;
+    margin-right:510px;
+    margin-top:10px;
+     z-index:1;
+}
+   body{
+      padding-left: 0;
+      height:1100px;
+   }
+   .btn-primary{
+       width:50%;
+       margin-left:160px;
+   }
+   #search{
+  display:none;
+}
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 13px;
+    padding: 5px;
+}
+   
+}
+@media (max-width:660px){
+
+   html{
+      font-size: 13px;
+     
+}
+
+   body{
+      padding-left: 0;
+       height:1100px;
+   }
+   .content .box {
+    padding: 6px;
+    width: 450px;
+    
+    margin-left:-150px;
+    margin-right:610px;
+    margin-top:10px;
+     z-index:1;
+
+}
+
+#search{
+  display:none;
+}
+   .btn-primary{
+  display:none;
+}
+   }
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 13px;
+    padding: 5px;
+}
+   
+}
+
+
+@media (max-width:550px) { 
+
+   html{
+      font-size:13px;
+     
+}
+   body{
+      padding:0px;
+      height:500px;
+   }
+   .content .box {
+    padding: 2px;
+    width: 400px;
+    margin-left:-180px;
+    margin-right:510px;
+    margin-top:10px;
+     z-index:10;
+
+}
+h3{
+    font-size:20px;
+    padding:0px;
+}
+  .btn-primary{
+       display:none;
+     
+   }
+   .products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 8px;
+    padding: 2px;
+}
+#search{
+  display:none;
+}
+
+}
+@media (max-width: 477px) { 
+
+   html{
+      font-size: 45%;
+     
+}
+h3{
+    padding:5px;
+}
+
+   body{
+      padding:10px;
+      height:500px;
+   }
+   .content .box {
+    padding: 2px;
+    width: 350px;
+    margin-left:-210px;
+    margin-right:10px;
+    margin-top:10px;
+     z-index:10;
+
+}
+  .btn-primary{
+       display:none;
+   }
+   .content .box .user-info td, .user-info th {
+font-size: 45%;
+  padding: 0px;
+}
+#search{
+  display:none;
+}
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 6px;
+    padding: 2px;
+}
+   
+}
+@media (max-width: 406px) { 
+ html{
+      font-size: 45%;
+     
+}
+
+   body{
+      padding:0px;
+      height:400px;
+   }
+   .content .box {
+    padding: 0px;
+    width: 340px;
+    margin-left:-210px;
+    margin-right:10px;
+    margin-top:10px;
+     z-index:10;
+
+}
+h3{
+    padding:10px;
+}
+   .btn-primary{
+      display:none;
+   }
+   .content .box .user-info td, .user-info th {
+  padding: 0px;
+  font-size: 11px;
+}
+#search{
+  display:none;
+}
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 6px;
+    padding: 2px;
+}
+}
+@media (max-width: 294px) {
+    #search{
+  display:none;
+}
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 6px;
+    padding: 2px;
+}
+}
+@media (max-width: 393px) { 
+ html{
+      font-size: 35%;
+     
+}
+.content .box .user-info td, .user-info th {
+  padding: 0px;
+  font-size: 45%;
+}
+   body{
+      padding:0px;
+      height:400px;
+   }
+   .content .box {
+    padding: 0px;
+    width: 320px;
+    margin-left:-210px;
+    margin-top:10px;
+     z-index:10;
+
+}
+h3{
+    padding:10px;
+}
+  .btn-primary{
+       width:30%;
+       margin-left:170px;
+        z-index:11;
+   }
+    #search{
+  display:none;
+}
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 6px;
+    padding: 2px;
+}
+}
+@media (max-width: 280px) { 
+ html{
+      font-size: 35%;
+   }
+
+   body{
+      padding:0px;
+      height:400px;
+   }
+   .content .box {
+    padding: 0px;
+    width: 330px;
+    margin-left:-220px;
+    margin-right:10px;
+    margin-top:10px;
+     z-index:1;
+
+}
+   .btn-primary{
+       display:none;
+   }
+ 
+#search{
+  display:none;
+}
+.products td, .products th {
+    border: 1px solid #ddd;
+     font-size: 6px;
+    padding: 2px;
+}
+}
+
 
 </style>
 
@@ -286,6 +623,7 @@ h3{
   </tr>
   </thead>
   <tbody id="employee_table">
+      
   <?php
   $sql = "SELECT * FROM `users`";
   $result = mysqli_query($conn, $sql);

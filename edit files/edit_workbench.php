@@ -26,13 +26,26 @@ $data=$result->fetch_assoc();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
-   <style>.content {
+   <style>.wrapper .sidebar{
+	background:#393E46;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	padding: 14px 0;
+	transition: all 0.5s ease;
+}
+  h2{
+      margin-left:20px;
+  }
+.content {
   border: 1px;
   
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin-top: 40px;
+  margin-bottom: 50px;
   margin-right: 0px;
-  margin-left: 180px;
+  margin-left: 250px;
     word-wrap: break-word;
     
 }
@@ -46,14 +59,15 @@ $data=$result->fetch_assoc();
 }
 
  .content .box {
-    padding: 5px;
-    width: 65%;
-    background-color:white;
+    padding: 10px;
+    width: 85%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       display: block;
        margin-left: auto;
         margin-right: auto;
+        background:white;
   }
+
  .content .box.user-info {
   font-family: Arial, Helvetica, sans-serif;
   
@@ -61,22 +75,22 @@ $data=$result->fetch_assoc();
 }
 
 .content .box .user-info td, .user-info th {
- 
-  padding: 15px;
+ font-size:13px;
+  padding: 9px;
 }
 
 
 
 .content .box.user-info th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 18px;
   text-align: left;
- 
+ font-size:19px;
 
 }
 .content .box .heading{
 font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;
+font-size: 15px;
 }
 
 .products {
@@ -87,25 +101,21 @@ font-size: 30px;
 
 .products td, .products th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 3px;
+  font-size:15px;
+}
+.but {
+color: white;
 }
 
-input[type=submit]:hover {
-  background-color: #0D4C92;
-}
-.heading{
-  margin-left: 90px;
-  color: black;
-  margin-bottom: 20px;
 
 
-}
 
-.products tr:hover {background-color: #0D4C92;}
+.products tr:hover {background-color: #ddd;}
 
 .products th {
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 12px;
   text-align: left;
   background-color: #0D4C92;
   color: white;
@@ -113,6 +123,13 @@ input[type=submit]:hover {
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #0D4C92;
+    margin-left: 900px;
+    margin-bottom: 30px;
+    
+  
+}
+.btn-secondary{
+  margin-left: 490px;
 }
 </style>
 
@@ -136,7 +153,7 @@ input[type=submit]:hover {
                 </li>
                     
                 <li>
-                    <a href="admin_products.php" class="active">
+                    <a href="admin_products.php" >
                         
                         <span class="item">Products</span>
                     </a>
@@ -154,7 +171,7 @@ input[type=submit]:hover {
                     </a>
                 </li>
                 <li>
-                    <a href="admin_workbench.php">
+                    <a href="admin_workbench.php" class="active">
                         
                         <span class="item">Workbench</span>
                     </a>

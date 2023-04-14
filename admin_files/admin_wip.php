@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
-    header("location: index.php");
+    header("location: login_admin.php");
     exit;
 }
 ?>
@@ -25,7 +25,120 @@ include 'dbconnect.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">  
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
    <style>
-   .wrapper .sidebar{
+ h2{
+      margin-left:60px;
+  }
+ .content {
+  border: 1px;
+  
+  margin-top: 10px;
+  margin-bottom: 60px;
+  margin-right: 5px;
+  margin-left: 240px;
+    word-wrap: break-word;
+   
+}
+.but {
+color: white;
+}
+h3{
+    font-size:20px;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+   
+
+ .content .box {
+    padding: 3px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: block;
+       background-color:white;
+       margin-left: auto;
+        margin-right: auto;
+  }
+ .content .box.user-info {
+  font-family: Arial, Helvetica, sans-serif;
+  
+  width: 100%;
+}
+
+.content .box .user-info td, .user-info th {
+ font-size:13px;
+  padding: 5px;
+}
+
+
+
+.content .box.user-info th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+ 
+
+}
+.content .box .heading{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+}
+
+.products {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size:13px;
+}
+
+.products td, .products th {
+  border: 1px solid #ddd;
+  padding: 3px;
+  font-size:13px;
+   text-align: center;
+}
+
+
+
+.products tr:hover {background-color: #ddd;}
+
+.products th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  background-color: #0D4C92;
+  color: white;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #0D4C92;
+    margin-left: 590px;
+    margin-bottom: 7px;
+}
+.but {
+color: white;
+}
+.input-group{
+     margin-bottom: 10px;
+}
+#search{
+  width:200px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  margin-left: 700px;
+  display: inline-block;
+  border: 1px solid #ccc;
+ 
+  box-sizing: border-box;
+}
+.wrapper .sidebar{
 	background:#393E46;
 	position: fixed;
 	top: 0;
@@ -35,116 +148,298 @@ include 'dbconnect.php';
 	padding: 14px 0;
 	transition: all 0.5s ease;
 }
-   h2{
-      margin-left:60px;
-  }
-   .content {
-  border: 0.5px;
-  
-  margin-top: 10px;
-  margin-bottom: 60px;
-  margin-right: 0px;
-  margin-left: 230px;
-    word-wrap: break-word;
-    
-}
-* {
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    
+@media (max-width:1054px){
+
+   .but{
+       margin-left:20px;
+       
+   }
+   
 }
 
- .content .box {
-    padding: 3px;
+@media (max-width:991px){
+
+   html{
+      font-size: 85%;
+  
+   }
+
+   body{
+      padding-left: 0;
+   }
+   .content .box {
+    padding: 6px;
     width: 100%;
-    background-color:white;
-    text-align:center;
-font-size: 12px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      display: block;
-       margin-left: auto;
-        margin-right: auto;
-  }
- .content .box.user-info {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:12px;
-  width: 100%;
-}
-
-.content .box .user-info td, .user-info th {
- text-align:center;
-  padding: 7px;
-}
-
-
-
-.content .box.user-info th {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  text-align:center;
-  font-size:14px;
- 
+    margin-left:0px;
+    margin-right:810px;
+    margin-top:10px;
+     z-index:1;
 
 }
-.content .box .heading{
-font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;
+   .but{
+       margin-left:10px;
+   }
+   
+}
+@media (max-width:915px){
+
+   .but{
+       margin-left:10px;
+   }
+   .wrapper{
+       width:50%;
+   }
+   
+}
+@media (max-width:815px){
+     html{
+      font-size: 65%;
+     
+   }
+
+
+   body{
+      padding-left: 0;
+   }
+   .but{
+       margin-left:10px;
+   }
+   
+}
+@media (max-width:808px){
+
+   .but{
+       margin-left:10px;
+   }
+   
+}
+@media (max-width:700px){
+     html{
+      font-size: 65%;
+     }
+   .content .box {
+    padding:5px;
+    width: 450px;
+    margin-left:-70px;
+    margin-right:510px;
+    margin-top:10px;
+     z-index:1;
+}
+   body{
+      padding-left: 0;
+      height:1100px;
+   }
+   .btn-primary{
+       width:50%;
+       margin-left:160px;
+   }
+   
+   
+}
+@media (max-width:660px){
+
+   html{
+      font-size: 85%;
+     
 }
 
-.products {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.products td, .products th {
-  border: 1px solid #ddd;
-  padding: 5px;
-}
-
-
-
-.products tr:hover {background-color: #ddd;}
-
-.products th {
-  padding-top: 9px;
-  padding-bottom: 9px;
-  text-align: left;
-  background-color: #0D4C92;
-  color: white;
-}
-
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+   body{
+      padding-left: 0;
+       height:1100px;
+   }
+   .content .box {
+    padding: 6px;
+    width: 100%;
     
-  background-color: #0D4C92;
-  margin-left: 650px;
-    margin-bottom: 7px;
-  
+    margin-left:-70px;
+    margin-right:610px;
+    margin-top:10px;
+     z-index:1;
+
 }
-.but {
-color: white;
+   .btn-primary{
+       width:50%;
+       margin-left:130px;
+   }
+   td,th{
+    padding:8px;
+    font-size: 14px;
 }
-#search{
-  width:100%;
-  padding: 5px 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-right: 70px;
-  margin-left: 750px;
-  display: inline-block;
-  border: 1px solid #ccc;
+   
+}
+
+@media (max-width:550px) { 
+
+   html{
+      font-size: 85%;
+     
+}
+   body{
+      padding:0px;
+      height:500px;
+   }
+   .content .box {
+    padding: 2px;
+    width: 400px;
+    margin-left:-180px;
+    margin-right:510px;
+    margin-top:10px;
+     z-index:10;
+
+}
+  .btn-primary{
+       width:50%;
+       margin-left:130px;
+   }
+   td,th{
+    padding:8px;
+    font-size: 12px;
+}
+
+   
+}
+@media (max-width: 477px) { 
+
+   html{
+      font-size: 45%;
+     
+}
+h3{
+    padding:5px;
+}
+
+   body{
+      padding:10px;
+      height:500px;
+   }
+   .content .box {
+    padding: 2px;
+    width: 340px;
+    margin-left:-190px;
+    margin-right:10px;
+    margin-top:10px;
+     z-index:10;
+
+}
+  .btn-primary{
+       width:30%;
+       margin-left:140px;
+        z-index:11;
+   }
+   .content .box .user-info td, .user-info th {
+font-size: 45%;
+  padding: 0px;
+}
+
+td,th{
+    padding:0px;
+    font-size: 12px;
+}
+   
+}
+@media (max-width: 406px) { 
+ html{
+      font-size: 45%;
+     
+}
+
+   body{
+      padding:0px;
+      height:400px;
+   }
+   .content .box {
+    padding: 0px;
+    width: 360px;
+    margin-left:-220px;
+    margin-right:10px;
+    margin-top:10px;
+     z-index:10;
+
+}
+h3{
+    padding:10px;
+}
+   .btn-primary{
+       width:30%;
+       margin-left:130px;
+        z-index:11;
+   }
+   .content .box .user-info td, .user-info th {
+  padding: 0px;
+  font-size: 45%;
+}
+
+td,th{
+    padding:0px;
+    font-size: 12px;
+}
+}
+@media (max-width: 294px) {
+    
+}
+@media (max-width: 393px) { 
+ html{
+      font-size: 35%;
+     
+}
+.content .box .user-info td, .user-info th {
+  padding: 0px;
+  font-size: 45%;
+}
+   body{
+      padding:0px;
+      height:400px;
+   }
+   .content .box {
+    padding: 0px;
+    width: 360px;
+    margin-left:-240px;
+    margin-top:10px;
+     z-index:10;
+
+}
+h3{
+    padding:10px;
+}
+   .but{
+       margin-left:10px;
+       z-index:10;
+   }
+    
+td,th{
+    padding:0px;
+    font-size: 12px;
+}
+}
+@media (max-width: 280px) { 
+ html{
+      font-size: 35%;
+   }
+
+   body{
+      padding:0px;
+      height:400px;
+   }
+   .content .box {
+    padding: 0px;
+    width: 360px;
+    margin-left:-250px;
+    margin-right:10px;
+    margin-top:10px;
+     z-index:1;
+
+}
+   .but{
+       margin-left:10px;
+        
+   }
  
-  box-sizing: border-box;
+
+td,th{
+    padding:0px;
+    font-size: 9px;
 }
-h2{
-    text-align:center;
-    color: white;
-    margin-right:170px;
-  }
+}
 
 </style>
 
@@ -257,7 +552,7 @@ h2{
         
   <tr class="heading">
  <td> <h3><u>WIP Inventory</u></h3></td>
- <td><button type="button" class="btn btn-primary"> <a class="but" href="add_wip.php"> Add Item</a></button> </td>
+ <!--<td><button type="button" class="btn btn-primary"> <a class="but" href="add_wip.php"> Add Item</a></button> </td>-->
     </tr>
   
       <table class="products">

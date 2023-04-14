@@ -4,8 +4,8 @@ if(isset($_GET['editid'])){
   
 
 
-$product_id=$_GET['editid'];
-$sql="SELECT * FROM `products` WHERE product_id = '$product_id'";
+$id=$_GET['editid'];
+$sql="SELECT * FROM `workbench` WHERE id = '$id'";
 $result=$conn->query($sql);
 
 if($result->num_rows!=1){
@@ -25,100 +25,8 @@ $data=$result->fetch_assoc();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">   
-   <style>   
-   <style>.content {
-  border: 1px;
-  
-  margin-top: 30px;
-  margin-bottom: 60px;
-  margin-right: 0px;
-  margin-left: 170px;
-    word-wrap: break-word;
-    
-}
-* {
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
- .content .box {
-    padding: 5px;
-    width: 65%;
-    
-    
-background-color:white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      display: block;
-       margin-left: auto;
-        margin-right: auto;
-  }
- .content .box.user-info {
-  font-family: Arial, Helvetica, sans-serif;
-  
-  width: 100%;
-}
-
-.content .box .user-info td, .user-info th {
- 
-  padding: 15px;
-}
-
-
-
-.content .box.user-info th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
- 
-
-}
-.content .box .heading{
-font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;
-}
-
-.products {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.products td, .products th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-
-input[type=submit]:hover {
-  background-color: #0D4C92;
-}
-.heading{
-  margin-left: 90px;
-  color: black;
-  margin-bottom: 20px;
-
-
-}
-.products tr:hover {background-color: #0D4C92;}
-
-.products th {
-  padding-top: 10px;
-  padding-bottom: 5px;
-  text-align: left;
-  background-color: #0D4C92;
-  color: white;
-}
-
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #0D4C92;
-}
-.wrapper .sidebar{
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
+   <style>.wrapper .sidebar{
 	background:#393E46;
 	position: fixed;
 	top: 0;
@@ -223,99 +131,67 @@ color: white;
 .btn-secondary{
   margin-left: 490px;
 }
-.namee{
-  margin-left: 0px;
-}
-.pencil{
-  margin-left: 530px;
-  
-    position: absolute;
-     margin-top: 0px;
-}
 </style>
 
     
 
-    <title> Edit Product</title>
+    <title>Edit Workbench</title>
   </head>
   <body>
 
-   <div class="wrapper">
-        <div class="section">
-            <div class="top_navbar">
-                <div class="hamburger">
-                    <a href="#">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </div>
-            </div>
-             
-        </div>
+  <div class="wrapper">
         <div class="sidebar">
             <div class="profile">
-
-                
+            
+            
             </div>
             <ul>
                 <li>
-                    <a href="admin_profile.php" >
+                    <a href="user_profile.php">
                         <span class="item">Profile</span>
                     </a>
                 </li>
                     
                 <li>
-                    <a href="admin_products.php" class="active">
+                    <a href="user_products.php" >
                         
                         <span class="item">Products</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_porders.php">
-                        
-                        <span class="item">Product Orders</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_rawmaterials.php">
+                    <a href="user_rawmaterials.php">
                         
                         <span class="item">Raw Materials Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_workbench.php">
+                    <a href="user_workbench.php" class="active">
                         
                         <span class="item">Workbench</span>
                     </a>
                 </li>
-                
                 <li>
-                    <a href="admin_wip.php">
+                    <a href="user_wip.php">
                         
                         <span class="item">WIP Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_finishedg.php">
+                    <a href="user_finishedg.php">
                         
                         <span class="item">Finished Goods Inventory</span>
                     </a>
                 </li>
                 <li>
-                    <a href="admin_mro.php">
+                    <a href="user_mro.php">
                         
                         <span class="item">MRO Inventory</span>
                     </a>
                 </li>
                  <li>
-                 <a href="comments.php">
+                 <a href="user_comments.php">
                         
                         <span class="item">Comments</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_empmanage.php">
-                        
-                        <span class="item">Employee Management</span>
                     </a>
                 </li>
                 <li>
@@ -326,49 +202,51 @@ color: white;
                 </li>
             
   </ul>
-        </div>
-
-   </div> 
+  
+       </div>
+</div> 
 
 
         
 <div class="content"> 
-<h2 class="heading">Edit Product Info</h2>
+<h2 class="heading">Edit Workbench Info</h2>
 <div class="box">
 <div>
-  <form action="modify.php?editid=<?= $product_id ?>" method="post">
-  <table>
-      <tr>
-          <td>
-              <label>Product ID</label><br>
-    <input type="text"  name="product_id" placeholder="Product ID" value="<?= $data['product_id']?>">
-          </td>
-          <td>
-              <label>Product Name</label><br>
-    <input type="text"  name="product_name" placeholder="Product name" value="<?= $data['product_name']?>">
-          </td>
-      </tr>
-   <tr>
-       <td>
-           <label>Quantity</label><br>
-    <input type="text"  name="quantity" placeholder="Quantity" value="<?= $data['quantity']?>">
-       </td>
-       <td>
-           <label>Unit</label><br>
-    <input type="text"  name="unit" placeholder="Unit" value="<?= $data['unit']?>">
-       </td>
-   </tr>
-   <tr>
-       <td>
-            
-    <label>Workbench</label><br>
-    <input type="text"  name="workbench_id" placeholder="workbench_id" value="<?= $data['workbench_id']?>">
-       </td>
-   </tr>
-   
-    </table>
+  <form action="modify_userworkbench.php?editid=<?= $id ?>" method="post">
+      
+      <table>
+  <tr>
+    <td>
+     <label>Workbench ID</label><br> 
+    <input type="text"  name="id" placeholder="workbench ID" value="<?= $data['id']?>" readonly>
+    </td>
+    <td>
+    <label>Department</label><br> 
+    <input type="text"  name="department" placeholder="Department" value="<?= $data['department']?>" readonly>
+    </td>
+    
+  </tr>
+
+  <tr>
+    <td>
+    <label>Status</label><br> 
+  <select name="status">
+                        <option><?= $data['status']?></option>
+                        <option>Occupied</option>
+                        <option>Not Occupied</option>
+                        
+                    </select>
+    </td>
+    <td>
+    <label>Duration</label><br> 
+    <input type="text"  name="duration" placeholder="Duration" value="<?= $data['duration']?>" readonly>
+    </td>
+    
+  </tr>
+  
+</table>
     <br>
-    <button style="width:20%; margin-left:20px;  margin-bottom:10px;" type="submit" class="btn btn-primary" name="update">Update</button>
+    <button style="width:20%; margin-left:20px; margin-bottom:10px;" type="submit" class="btn btn-primary" name="update">Update</button>
   
   </form>
   </div>
@@ -376,11 +254,5 @@ color: white;
 
 </div>
 </div>
-<script>
-       var hamburger = document.querySelector(".hamburger");
-	hamburger.addEventListener("click", function(){
-		document.querySelector("body").classList.toggle("active");
-	})
-  </script>
 </body>
 </html>
