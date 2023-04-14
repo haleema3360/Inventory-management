@@ -13,6 +13,15 @@
     $sql="DELETE FROM `wip` WHERE batch_id='$bid'";
     $result = mysqli_query($conn, $sql);
     $sql5=mysqli_query($conn,"UPDATE `porders` SET status='Finished Goods Inventory' WHERE product_id='$pid'");
+  
+  $sql6="SELECT `quantity` FROM `porders` WHERE product_id=$pid";
+   $stmt=$conn->query($sql6);
+         if($stmt!==false){
+     $row = $stmt->fetch_array(MYSQLI_ASSOC);
+    $qnty = $row['quantity'];
+   
+    $sql7=mysqli_query($conn,"UPDATE `products` SET quantity=quantity+$qnty WHERE product_id=$pid");
+         }
     if($result){
             header("location:admin_wip.php");
             echo"Delete successful";
